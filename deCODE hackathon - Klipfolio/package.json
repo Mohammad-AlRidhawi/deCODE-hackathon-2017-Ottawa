@@ -1,0 +1,13 @@
+{
+  "name": "decode",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.0.0",
+    "requirejs": "2.3.3"
+  },
+  "devDependencies": {
+    "body-parser": "^1.17.1",
+    "mongodb": "^2.2.25",
+    "papaparse": "^4.2.0"
+  }
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script data-main="main.js" src="../node_modules/requirejs/require.js"></script>
+    <script src="jquery-3.2.0.min.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="table.css">
+  </head>
+  <body>
+    <div class="header">
+        <div id="add" class="overlay">
+          <div class="overlay-content">
+            <h4>Select the columns from your file</h4>
+            <div id="page-3" class="border-south"></div>
+            <div><button class="closebtn btn btn-danger" style="margin-right:5px;">Cancel <span class="glyphicon glyphicon-remove"></span></button><button class="check btn btn-success">Accept <span class="glyphicon glyphicon-ok"></span></button></div>
+          </div>
+        </div>
+        <div id="select-file" class="overlay">
+          <div class="overlay-content">
+            <h4>Select your file</h4>
+            <div id="file-list-target" class="border-south"></div>
+          </div>
+        </div>
+        <button id="menu-list">
+            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+        </button>
+        <span class="logo-wrapper">
+            <img src="/images/klipfolio_full_logo.svg" class="header-logo"/>
+        </span>
+        <button id="addbtn" style="float:right;">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <div id="dashboard-container"></div>
+
+	<div id="edit" class="edit-hidden">
+		<form action="">
+			<h4 style="color: white; margin-left: 10px">Header color:</h4>
+			<div class="editheader" style="margin-top: 10px; margin-left: 10px;">
+				<input type="radio" name="hcolors" id="blue" value="#2a3b4f">
+				<label for="blue" class="bluebtn"></label>
+				<input type="radio" name="hcolors" id="blgreen" value="#16b99a">
+				<label for="blgreen" class="blgreenbtn"></label>
+				<input type="radio" name="hcolors" id="green" value="#38cc80">
+				<label for="green" class="greenbtn"></label>
+				<input type="radio" name="hcolors" id="yellow" value="#f9c21d">
+				<label for="yellow" class="yellowbtn"></label>
+				<input type="radio" name="hcolors" id="red" value="#fd4543">
+				<label for="red" class="redbtn"></label>
+				<input type="radio" name="ccolors" id="hdefault" value="#ffffff" checked>
+			</div>
+			<h4 style="color: white; margin-left: 10px">Cell color:</h4>
+			<div class="editheader" style="margin-left: 10px;">
+				<input type="radio" name="ccolors" id="cblue" value="#2a3b4f">
+				<label for="cblue" class="bluebtn"></label>
+				<input type="radio" name="ccolors" id="cblgreen" value="#16b99a">
+				<label for="cblgreen" class="blgreenbtn"></label>
+				<input type="radio" name="ccolors" id="cgreen" value="#38cc80">
+				<label for="cgreen" class="greenbtn"></label>
+				<input type="radio" name="ccolors" id="cyellow" value="#f9c21d">
+				<label for="cyellow" class="yellowbtn"></label>
+				<input type="radio" name="ccolors" id="cred" value="#fd4543">
+				<label for="cred" class="redbtn"></label>
+				<input type="radio" name="ccolors" id="cdefault" value="#ffffff" checked>
+			</div>
+		</form>
+		<div class="editselect"><button id="edit-cancel" class="color-cancel btn btn-danger" style="margin-right:5px;">Cancel <span class="glyphicon glyphicon-remove"></span></button><button class="color-check btn btn-success">Apply <span class="glyphicon glyphicon-ok"></span></button>
+		</div>
+	</div>
+    <input id="viz-edit-id" type="hidden" />
+  </body>
+    <style>
+        .dropdown-content{display:none;}
+        #addbtn{float:right;}
+    </style>
+</html>
